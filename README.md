@@ -9,8 +9,7 @@ This project provides a Flask-based API for predicting whether job descriptions 
 - [Usage](#usage)
 
 ## Requirements
-- [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) (Anaconda or Miniconda) (optional)
-- Python 3.8.5
+- [Docker](https://www.docker.com/products/docker-desktop)
 
 ## Setup
 
@@ -28,27 +27,24 @@ Download the trained FastText model from this link: [Google Drive Link](https://
 
 Add the downloaded file to the main repository directory.
 
-### 3. Create a New Python Environment (Optional)
 
-It is recommended to create a new Conda environment. Please note that the used Python version is 3.8.5. Some packages could be deprecated in newer versions of Python.
+## Docker
+1. Open Docker Desktop: Ensure Docker Desktop is running.
+2. Open Terminal: Open Git Bash, Command Prompt, or PowerShell.
+3. Navigate to Project Directory
+   
+
+### 3. Build the Docker image
+To build the Docker image, run the following command in the project directory:
 ```sh
-conda create --name fraud-detection-env python=3.8.5
-conda activate fraud-detection-env
+docker build -t fraud-detection-api .
 ```
 
-### 4. Install Requirements
-   
-Install the required dependencies in the new environment:
+## Running the application
+### 4. Run the Docker container
+To run the Docker container, use the following command:
 ```sh
-python -m pip install -r requirements.txt
-```
-
-## running-the-application
-### 5. Run the Application
-   
-Run the application using the following command:
-```sh
-python fraudulent.py
+docker run -p 5000:5000 fraud-detection-api
 ```
 
 ### 6. Browse to the Application
