@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Description Fraud Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .container h2 {
+            margin-top: 0;
+        }
+        .container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .container form textarea {
+            resize: none;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+        .container form button {
+            padding: 10px;
+            font-size: 16px;
+            background: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .container form button:hover {
+            background: #218838;
+        }
+        .prediction {
+            margin-top: 20px;
+            padding: 10px;
+            background: #e9ecef;
+            border-left: 5px solid #0004ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Job Description Fraud Detection</h2>
+        <form action="/predict" method="POST">
+            <textarea name="description" rows="8" placeholder="Enter job description..." required></textarea>
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction_text %}
+        <div class="prediction">
+            <strong>{{ prediction_text }}</strong>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
