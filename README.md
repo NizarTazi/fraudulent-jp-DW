@@ -1,6 +1,6 @@
 # Fraud Detection API
 
-This project provides a Flask-based API for predicting whether job descriptions are fraudulent using a pre-trained FastText model and a Random Forest classifier.
+This project provides a Flask-based API using Docker for predicting whether job descriptions are fraudulent using a pre-trained FastText model and a Random Forest classifier.
 
 ## Table of Contents
 - [Requirements](#requirements)
