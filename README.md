@@ -17,7 +17,7 @@ This project provides a Flask-based API using Docker for predicting whether job 
 First, clone the repository to your local machine:
 
 ```sh
-git clone https://github.com/yourusername/fraud-detection-api.git
+git clone https://github.com/NizarTazi/fraud-detection-api.git
 cd fraud-detection-api
 ```
 
